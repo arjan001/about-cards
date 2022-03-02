@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 1000px;
+    height: 400px;
+    background:#ccc;
+    margin: 120px auto;
+    display: flex;
+
+}
+.col{
+    height: 100%;
+    flex: 1;
+    color: #fff;
+    box-sizing: border-box;
+    padding: 25px;
+    position: relative;
+    transition: 0.6s;
+
+}
+.col:nth-child(1){
+    background:linear-gradient(rgb(0, 255, 255),rgb(255, 73, 7));
+}
+.col:nth-child(2) {
+    background:linear-gradient(rgb(245, 115, 115),rgb(236, 178, 69));
+}
+.col:nth-child(3) {
+    background:linear-gradient(rgb(255, 51, 0),rgb(0, 16, 238));
+}
+
+/* trial hover code on col */
+.col:nth-child(1):hover{
+    background:linear-gradient(pink,rgb(200, 17, 236))
+}
+
+.col:nth-child(2):hover {
+    background: linear-gradient(rgb(212, 209, 209), rgb(3, 3, 3))
+}
+
+.col:nth-child(3):hover {
+    background: linear-gradient(rgb(28, 255, 7), rgb(251, 255, 0));
+    color:#000;
+}
+/* end of trial background code */
+
+h2{
+    text-align: center;
+    font-size:22px;
+    font-weight:bold;
+
+}
+.caption{
+    max-width:230px;
+    font-size:12px;
+    margin: 28px 0;
+    display:none;
+
+}
+.caption button{
+border: 1px solid #fff;
+background: transparent;
+outline: none;
+padding:8px 18px;
+color: #fff;
+border-radius:30px;
+margin-top:20px;
+cursor: pointer;
+transition:0.6s;
+
+}
+.caption button:hover{
+    background: rgb(0, 0, 0);
+    
+}
+.col img{
+    width:280px;
+    position:absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.col:hover{
+    flex-grow: 2.5;
+    overflow: hidden;
+}
+.col:hover .caption{
+    display: block;
+}
+.col:hover h2{
+    text-align: left;
+    color:#000;
+}
